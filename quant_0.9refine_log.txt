@@ -1,0 +1,56 @@
+python vggquant.py --quant_method linear --test-batch-size 64 --model logs_prune_refine\0.9refine_model_best.pth.tar --cfg --save ./logs_quant_0.9prune_refine
+=> loading checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar'
+=> loaded checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar' (epoch 134) Prec1: 0.910200
+ * TotalTime 2473.9ms Mean@1 15.757ms Std@5 136.569 FPS@1 63.46
+
+Test set: Accuracy: 9102/10000 (91.0%)
+
+ * TotalTime 4427.7ms Mean@1 28.202ms Std@5 45.995 FPS@1 35.46
+
+Test set: Accuracy: 9053/10000 (90.5%)
+
+python vggquant.py --quant_method minmax --test-batch-size 64 --model logs_prune_refine\0.9refine_model_best.pth.tar --cfg --save ./logs_quant_0.9prune_refine
+=> loading checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar'
+=> loaded checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar' (epoch 134) Prec1: 0.910200
+ * TotalTime 2436.7ms Mean@1 15.520ms Std@5 134.028 FPS@1 64.43
+
+Test set: Accuracy: 9102/10000 (91.0%)
+
+ * TotalTime 2966.0ms Mean@1 18.892ms Std@5 2.330 FPS@1 52.93
+
+Test set: Accuracy: 9085/10000 (90.8%)
+python vggquant.py --quant_method minmax_log --test-batch-size 64 --model logs_prune_refine\0.9refine_model_best.pth.tar --cfg --save ./logs_quant_0.9prune_refine
+=> loading checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar'
+=> loaded checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar' (epoch 134) Prec1: 0.910200
+ * TotalTime 2361.5ms Mean@1 15.042ms Std@5 127.569 FPS@1 66.48
+
+Test set: Accuracy: 9102/10000 (91.0%)
+
+ * TotalTime 4201.6ms Mean@1 26.762ms Std@5 2.633 FPS@1 37.37
+
+Test set: Accuracy: 1789/10000 (17.9%)
+
+python vggquant.py --quant_method log --test-batch-size 64 --model logs_prune_refine\0.9refine_model_best.pth.tar --cfg --save ./logs_quant_0.9prune_refine
+
+=> loading checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar'
+=> loaded checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar' (epoch 134) Prec1: 0.910200
+ * TotalTime 2423.1ms Mean@1 15.434ms Std@5 131.605 FPS@1 64.79
+
+Test set: Accuracy: 9102/10000 (91.0%)
+
+ * TotalTime 4217.4ms Mean@1 26.863ms Std@5 2.498 FPS@1 37.23
+
+Test set: Accuracy: 1736/10000 (17.4%)
+
+python vggquant.py --quant_method tanh --test-batch-size 64 --model logs_prune_refine\0.9refine_model_best.pth.tar --cfg --save ./logs_quant_0.9prune_refine
+
+=> loading checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar'
+=> loaded checkpoint 'logs_prune_refine\0.9refine_model_best.pth.tar' (epoch 134) Prec1: 0.910200
+ * TotalTime 2443.2ms Mean@1 15.562ms Std@5 134.064 FPS@1 64.26
+
+Test set: Accuracy: 9102/10000 (91.0%)
+
+ * TotalTime 4041.5ms Mean@1 25.742ms Std@5 2.268 FPS@1 38.85
+
+Test set: Accuracy: 1000/10000 (10.0%)
+
